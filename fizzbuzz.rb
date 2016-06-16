@@ -5,6 +5,9 @@ class Fizzbuzz
   end
   
   def output
-    [1..100]
+    (1..100).step(1).to_a
   end
 end
+
+#new_fizz = Fizzbuzz.new(30)
+#p new_fizz.output

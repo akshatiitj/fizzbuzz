@@ -13,8 +13,8 @@ describe Fizzbuzz do
   end
 
   describe "#list_return" do
-    it "returns a list from 1 to up_bound" do
-      @fizzbuzz.output.should eql [1..100]
+    it "returns a list from 1 to 100" do
+      @fizzbuzz.output.should eql (1..100).step(1).to_a
     end
   end
 end
