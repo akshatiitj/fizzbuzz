@@ -1,8 +1,8 @@
 class Fizzbuzz
-  attr_accessor :up_bound, :low_bound
+  attr_reader :up_bound, :low_bound
   def initialize(low_bound = 1, up_bound = 100)
-    @up_bound = up_bound
-    @low_bound = low_bound
+    @up_bound = up_bound.to_i
+    @low_bound = low_bound.to_i
   end
   
   def iterate
@@ -11,8 +11,9 @@ class Fizzbuzz
     end
   end
 
+  private
   def print_to_screen(element)
-    p self.classify(element)
+    puts classify(element)
   end  
 
   def classify(number)
@@ -28,5 +29,5 @@ class Fizzbuzz
   end
 end
 
-#new_fizz = Fizzbuzz.new(1, 100)
-#new_fizz.iterate
+new_fizz = Fizzbuzz.new(10, 15)
+new_fizz.iterate
