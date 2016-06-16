@@ -14,7 +14,7 @@ describe Fizzbuzz do
 
   describe "#list_return" do
     it "returns a list from 1 to up_bound" do
-      @fizzbuzz.return.should eql "[1..100]"
+      @fizzbuzz.output.should eql [1..100]
     end
   end
 end
